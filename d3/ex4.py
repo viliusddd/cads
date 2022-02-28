@@ -6,17 +6,14 @@
 # Patarimas: Naudoti while ciklą, funkciją random.randint (import
 # random), else, break
 
-from random import randint
+from random import sample
 
-first = randint(1, 6)
-second = randint(1, 6)
-third = randint(1, 6)
-
-nums = first, second, third
-
-print(nums)
-
-for num in nums:
-    if num == 5:
+while True:
+    nums = sample(range(1, 6), 3)
+    print(f"Generated numbers: {nums}")
+    if 5 in nums:
         print("Pralaimėjai...")
+        break
+    else:
+        print("Laimėjai...")
         break
