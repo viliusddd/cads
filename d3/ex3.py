@@ -7,7 +7,9 @@
 
 words = []
 
-for i in range(5):
+num = int(input('Insert number of words you\'d like to insert: '))
+
+for i in range(num):
     inp = str(input(f'Insert {i+1} word: '))
     words.append(inp)
 
