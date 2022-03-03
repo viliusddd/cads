@@ -5,14 +5,18 @@
 #   numbers" ir iššaukiam exceptioną
 # * visais atvejais, kai metodas baigiasi, atspausdinam "Execution finished"
 
-def divide_number(first, second):
+def divide_numbers(first, second):
     try:
-        result = first / second
+        print(first / second)
     except ZeroDivisionError:
-        return "Division by zero not allowed"
+        print("Division by zero not allowed")
+        raise
     except TypeError:
-        return "Both parameters have to be numbers"
+        print("Both parameters have to be numbers")
+        raise
     finally:
-        return "Execution finished"
+        print("Execution finished")
 
-print(divide_number(6, 2))
+divide_numbers(6, 3)
+divide_numbers(6, 0)
+divide_numbers(6, "a")
