@@ -6,11 +6,12 @@
 
 from calendar import isleap
 
+years_from = int(input("Insert years from: "))
+years_to = int(input("Insert years to: "))
+
 def year_range(from_year, to_year):
     for yr in range(from_year, to_year):
         if isleap(yr):
-            print('Keliamieji metai')
-        else:
-            print('Nekeliamieji metai')
+            print(yr)
 
-year_range(1989, 2011)
+year_range(years_from, years_to)
