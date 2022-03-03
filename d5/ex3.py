@@ -10,7 +10,7 @@ years_from = int(input("Insert years from: "))
 years_to = int(input("Insert years to: "))
 
 def year_range(from_year, to_year):
-    for yr in range(from_year, to_year):
+    for yr in range(from_year, to_year + 1):
         if isleap(yr):
             print(yr)
 
