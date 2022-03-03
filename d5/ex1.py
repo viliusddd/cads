@@ -66,7 +66,8 @@ def equal_nums(nuo, iki):
     Atspausdina visus paduoto rėžio (nuo… iki) lyginius skaičius
 
     Args:
-         (_type_): _description_
+        nuo (int): pirmas skaičius
+        iki (int): antras skaičius
     """
     for i in range(nuo, iki + 1):
         if i % 2:
