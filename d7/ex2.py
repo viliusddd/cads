@@ -14,6 +14,8 @@
 # • Parodytų pranešimą apie neteisingai įvestas minutes, jei jos mažesnė
 # už 1 arba didesnės už 60
 
+import sys
+
 from datetime import datetime
 
 
