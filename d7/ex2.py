@@ -52,44 +52,42 @@ class Anniversary():
         self._hours = int(self.passed.total_seconds()) // 3600
         self._minutes = int(self.passed.total_seconds()) // 60
 
-        if 0 > self._years > 3000:
-            print(f"Wrong years input: {self._years}")
-            sys.exit()
-        elif 1 > self._months > 12:
-            print(self._months)
-            print(f"Wrong months input: {self._months}")
-            sys.exit()
-        elif 1 > self._days > 31:
-            print(f"Wrong months input: {self._days}")
-            sys.exit()
-        elif 0 > self._hours > 24:
-            print(f"Wrong hours input: {self._hours}")
-            sys.exit()
-        elif 1 > self._minutes > 64:
-            print(f"Wrong minutes input: {self._minutes}")
-            sys.exit()
-
     def years(self):
-        return f"Praėjo {self._years} metų"
+        if 0 < int(self._years) < 3000:
+            return f"Praėjo {self._years} metų"
+        else:
+            return f"Wrong years input: {self._years}"
 
     def months(self):
-        return f"Praėjo {self._months} mėnesių"
+        if 1 < self._months < 12:
+            return f"Praėjo {self._months} mėnesių"
+        else:
+            return f"Wrong months input: {self._months}"
 
     def days(self):
-        return f"Praėjo {self._days} dienų"
+        if 1 < self._days < 31:
+            return f"Praėjo {self._days} dienų"
+        else:
+            return f"Wrong months input: {self._days}"
+
 
     def hours(self):
-        return f"Praėjo {self._hours} valandų"
+        if 0 < self._hours < 24:
+            return f"Praėjo {self._hours} valandų"
+        else:
+            return f"Wrong hours input: {self._hours}"
 
     def minutes(self):
-        return f"Praėjo {self._minutes} minučių"
+        if 1 < self._minutes < 64:
+            return f"Praėjo {self._minutes} minučių"
+        else:
+            return f"Wrong minutes input: {self._minutes}"
 
 ann = Anniversary('1989-01-11')
-ann.date = '2020-01-11'
+ann.date = '4020-01-11'
 print(ann.date)
 print(ann.years())
 
-# print(ann.years())
-# print(ann.months())
-# print(ann.days())
-# print(ann.hours())
+print(ann.months())
+print(ann.days())
+print(ann.hours())
